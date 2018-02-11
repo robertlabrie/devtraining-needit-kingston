@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="Needit" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request type" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="hr" sequence="0" value="hr"/>
+                <element label="facilities" sequence="1" value="facilities"/>
+                <element label="legal" sequence="2" value="legal"/>
+                <element label="your_choice" sequence="3" value="your_choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal1" label="What needed" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="hr1" sequence="0" value="hr1"/>
+                <element label="hr2" sequence="1" value="hr2"/>
+                <element label="legal1" sequence="2" value="legal1"/>
+                <element label="legal2" sequence="3" value="legal2"/>
+                <element label="facilities1" sequence="4" value="facilities1"/>
+                <element label="facilities2" sequence="5" value="facilities2"/>
+                <element label="your_choice1" sequence="6" value="your_choice1"/>
+                <element label="your_choice2" sequence="7" value="your_choice2"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
